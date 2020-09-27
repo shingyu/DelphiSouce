@@ -1,0 +1,74 @@
+﻿program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+{子界：为什么使用，为了防止越界
+  注意事项
+  1）上界和下界必须是有序的数据类型 整数、字符、枚举
+  2）上界大于或等于下界
+}
+procedure demo1();
+{定义格式}
+type
+   {枚举}
+  EColors = (RED,GREEN,BLUE);
+  {子界}
+  TSubBondNumber = 1..10;
+  TSubBondChar =  'a'..'z';
+  {子界和枚举}
+   TSubBondEColors = EColors.RED..EColors.BLUE;
+begin
+    Writeln(low(TSubBondChar));
+
+end  ;
+{ 打印输出闰年还是平年，每个月份的天数和所属季节
+
+}
+type
+   {枚举}
+  ESeason = (SPRING,SUMMER,AUTUMN,WINTER);
+  {子界}
+  TSubBondMonths = 1..12;
+var
+   Season:ESeason;
+   Months: TSubBondMonths;
+   Year:Integer;
+
+
+begin
+    Writeln('请输入一个年份，格式为YYYY');
+    Readln(Year);
+    if Year mod 100 = 0 then
+    begin
+      if Year mod 400 = 0then
+      begin
+        Writeln('闰年');
+      end
+      else
+      begin
+        Writeln('平年');
+      end;
+
+
+    end
+    else
+    begin
+      if Year mod 4 = 0 then
+      begin
+        Writeln('闰年');
+      end
+      else
+      begin
+        Writeln('平年');
+      end;
+    end;
+    //judge season
+    Writeln('请输入一个月份，格式为MM');
+    Readln(Month);
+
+    Readln;
+end.

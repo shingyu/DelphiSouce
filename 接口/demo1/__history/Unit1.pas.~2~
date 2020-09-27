@@ -1,0 +1,10 @@
+unit Unit1;
+
+interface
+   type
+   IUsb = interface
+      ['{A4ABC1A5-A6DC-4152-AD10-D830EB9AF8A2}']//ctri shift +G
+   end;
+implementation
+
+end.

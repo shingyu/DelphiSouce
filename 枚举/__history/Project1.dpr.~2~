@@ -1,0 +1,16 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+{常量：我们一开始就定义好的一些值，以后在程序的运行
+中不允许改变，例如，圆周率
+}
+uses
+  System.SysUtils;
+ const
+   Pai:Double = 3.14;
+begin
+  Pai := 10.12;
+
+end.

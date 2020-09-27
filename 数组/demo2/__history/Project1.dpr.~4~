@@ -1,0 +1,30 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+//声明动态数组, array[1..100]不需要 不用写长度
+type
+    StringArray = array of string;
+  var  NameArray : StringArray ;
+  var  indexs  : Integer;
+procedure InitArray();
+begin
+    //设置长度
+  SetLength(NameArray,20);
+  NameArray := StringArray.Create('成龙','成狗');//另一种设置方法
+  NameArray := ['成龙','成狗','成猪','成虎']; //再一种
+  Writeln(Length(NameArray),',',Low(NameArray));
+end;
+begin
+  NameArray := ['成龙','成狗','成猪','成虎'];
+  for indexs := Low(NameArray) to High(NameArray) do
+  begin
+     Writeln(NameArray[indexs]);
+  end;
+
+  Readln;
+end.

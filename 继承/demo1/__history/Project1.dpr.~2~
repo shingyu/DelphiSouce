@@ -1,0 +1,77 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+{*------------------------------------------------------------------------------
+继承（派送）：类和类之间的关系
+
+特点
+   1.提高代码的复用  TForm
+
+   2.一旦产生派生关系之后，他们就具备了多态的特性
+
+   3.Delphi 中是单继承 ，但是可以是多层继承。
+
+继承中的构造方法
+    1.定义
+
+继承中的访问权限
+
+-------------------------------------------------------------------------------}
+
+
+uses
+  System.SysUtils,
+  uExtends in 'uExtends.pas';
+
+type
+    TAnimal = class
+    private
+        FWeight : Integer;
+    public
+        constructor Create();//定义一个构造方法
+
+      property Weight: Integer read FWeight write FWeight;
+
+    end;
+    TDog = class(TAnimal)//派生类，继承
+          public
+        constructor Create();
+    end;
+    TCat = class(TAnimal)
+           public
+        constructor Create();
+    end;
+{ TAnimal }
+
+constructor TAnimal.Create;
+begin
+   //类字段的初始化
+   Writeln('动物类');
+end;
+
+{ TDog }
+
+constructor TDog.Create;
+begin
+     Writeln('狗类');
+end;
+
+{ TCat }
+
+constructor TCat.Create;
+begin
+    Writeln('猫类');
+end;
+
+var
+  Dog:TDog;
+
+begin
+    Dog := TDog.Create();
+    Dog.Weight := 100;
+
+    Writeln(Dog.Weight);
+    Readln;
+end.

@@ -1,0 +1,58 @@
+unit Unit1;
+
+interface
+
+uses
+  System.IniFiles,Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    姓名: TLabel;
+    edtName: TEdit;
+    性别: TLabel;
+    rgSex: TRadioGroup;
+    rbMan: TRadioButton;
+    rbWoman: TRadioButton;
+    Label1: TLabel;
+    edtAge: TEdit;
+    GroupBox1: TGroupBox;
+    Label2: TLabel;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    CbAddress: TComboBox;
+    Label3: TLabel;
+    btnSave: TButton;
+    procedure btnSaveClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnSaveClick(Sender: TObject);
+
+  var
+    IniFile:TIniFile;
+    Section:string;
+begin
+  //配置文件
+    IniFile:= TIniFile.Create('C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\INI文件操作\demo1\Win32\Debug\UserConfig.ini');
+    Section := 'basic';
+    IniFile.WriteString(Section,'edtName',edtName.Text);
+    IniFile.WriteString(Section,'edtAge',edtAge.Text);
+    IniFile.WriteBool(Section,'man',rbMan.Checked);
+    IniFile.WriteBool(Section,'CheckBox1',CheckBox1.Checked);
+    IniFile.WriteBool(Section,'CheckBox2',CheckBox2.Checked);
+    IniFile.WriteInteger(Section,'address',CbAddress.ItemIndex);
+
+end;
+
+end.

@@ -1,0 +1,43 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+{什么是数组：按照一定编号存放了一堆类型相同数据的容器
+什么用：让我们在管理相同类型的数据时更方便
+怎么用 定义：
+array[indexType1,...,indextypen] of baseType;
+注意事项
+1.数组在使用之前必须要声明长度（下标、元素总数）
+
+}
+type
+    MyArray = array [0..10] of Char;
+  var
+  NameArray : MyArray;
+  Indexs : Integer;
+begin
+   { NameArray := ['p','r'];动态数组才能这样负值 }
+    NameArray[0] := 'x';
+    NameArray[1] := 's';
+    NameArray[2] := 't';
+    NameArray[3] := 'u';
+    NameArray[4] := 'd';
+    NameArray[5] := 'e';
+    NameArray[6] := 'n';
+    NameArray[7] := 't';
+    NameArray[8] := 'o';
+    NameArray[9] := 'v';
+    NameArray[10] := 'l';
+
+    Writeln(Low(NameArray),',',High(NameArray));
+    for Indexs := Low(NameArray) to High(NameArray) do
+    begin
+        Writeln(NameArray[Indexs]);
+    end;
+
+    Readln;
+end.

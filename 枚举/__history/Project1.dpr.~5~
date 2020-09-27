@@ -1,0 +1,27 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+{常量：我们一开始就定义好的一些值，以后在程序的运行
+中不允许改变，例如，圆周率
+枚举：常量集
+ type
+    枚举名=(标识符1,标识符2...)
+
+}
+uses
+  System.SysUtils;
+const
+   Pai:Double = 3.14;
+   {常量的定义方式，可不进行类型声明，编译器会根据
+   具体值来决定常量的类型
+   常量尽量定义在项目下，它具有全局性,枚举同
+   }
+   Pai2 = 3 ;
+type
+    EColors = (RED, GREEN, BLUE);
+begin
+  Pai := 10.12;
+
+end.

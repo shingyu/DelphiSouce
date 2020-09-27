@@ -1,0 +1,45 @@
+unit uExtends;
+
+interface
+ type
+    TAnimal = class
+    private
+        FWeight : Integer;
+    public
+        constructor Create();//定义一个构造方法
+
+      property Weight: Integer read FWeight write FWeight;
+
+    end;
+    TDog = class(TAnimal)//派生类，继承
+          public
+        constructor Create();
+    end;
+    TCat = class(TAnimal)
+           public
+        constructor Create();
+    end;
+implementation
+
+{ TAnimal }
+
+constructor TAnimal.Create;
+begin
+   //类字段的初始化
+   Writeln('动物类');
+end;
+
+{ TDog }
+
+constructor TDog.Create;
+begin
+     Writeln('狗类');
+end;
+
+{ TCat }
+
+constructor TCat.Create;
+begin
+    Writeln('猫类');
+end;
+end.

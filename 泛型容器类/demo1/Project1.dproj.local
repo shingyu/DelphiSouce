@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2020/09/24 23:54:39.722,=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/09/24 23:57:47.663,C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Unit1.pas=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/09/24 23:57:47.663,C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Unit1.dfm=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/09/24 23:57:52.149,C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Project1.dproj=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2020/09/25 00:10:59.158,=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Unit2.pas</Transaction>
+    <Transaction>2020/09/25 00:29:57.472,=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Unit3.pas</Transaction>
+    <Transaction>2020/09/25 00:30:56.414,C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Addform.pas=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Unit3.pas</Transaction>
+    <Transaction>2020/09/25 00:30:56.414,C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Addform.dfm=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Unit3.dfm</Transaction>
+    <Transaction>2020/09/25 00:33:10.249,C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\AddformUnit.pas=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Addform.pas</Transaction>
+    <Transaction>2020/09/25 00:33:10.249,C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\AddformUnit.dfm=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Addform.dfm</Transaction>
+    <Transaction>2020/09/25 00:55:34.762,=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Unit3.pas</Transaction>
+    <Transaction>2020/09/25 00:56:14.132,C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\DaoUnit.pas=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\泛型容器类\demo1\Unit3.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,43 @@
+unit Unit1;
+
+interface
+   type
+   IUsb = interface
+      ['{A4ABC1A5-A6DC-4152-AD10-D830EB9AF8A2}']//ctri shift +G
+     procedure Read();
+   end;
+
+   IUsb2 = interface
+      procedure write();
+   end;
+
+   IUsb3 = interface(IUsb2)
+
+   end; //接口继承接口
+
+   TComputer = class(TInterfacedObject)
+   end;
+
+   TLaptop = class(TComputer,IUsb2,IUsb)
+         procedure Read();
+         procedure write();
+   end;  //类继承接口
+implementation
+
+{ TComputer }
+
+
+
+{ TLaptop }
+
+procedure TLaptop.Read;
+begin
+
+end;
+
+procedure TLaptop.write;
+begin
+
+end;
+
+end.

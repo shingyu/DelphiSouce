@@ -1,0 +1,45 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+{
+1.历程是什么：Delphi中独有，将某一功能的代码片段进行封装
+具体表现形式：
+         （1）过程    （2）函数
+     过程和函数的区别在于有没有返回值
+2.历程的作用
+   （1）可解决命名冲突的问题
+   （2）提高代码的重复利用率
+   （3）提高代码的可维护性
+3.怎么使用历程
+   （1）定义
+}
+
+procedure Demo1(A:Integer; B: Integer);//传值
+begin
+
+
+end;
+
+function  Demo2(var A:Integer;var B: Integer) : Integer ; //传地址
+begin
+
+end;
+
+
+procedure Demo3(const Number:array of Integer);//传递参数不固定
+begin
+
+end;
+
+var
+   X,Y: Integer;
+
+begin
+   Demo3([1,2,3]);
+
+end.

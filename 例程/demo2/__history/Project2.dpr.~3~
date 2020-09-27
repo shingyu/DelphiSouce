@@ -1,0 +1,30 @@
+program Project2;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+  {delphi 中没有类似其他语言的return关键字
+  如果必须实现return效果 需要result和exit联合使用
+  }
+ {返回值 只有函数有 过程没有 }
+function Add(Number1:Integer;Number2:Integer):Integer;
+begin
+
+    Result := Number1 + Number2;//return 他是有终止功能， result没有，比如下面加上一段代码
+    Exit;
+    Writeln('*******');
+end;
+
+var
+   Sum: Integer;
+
+begin
+  Sum :=Add(100,200);
+  Writeln(Sum);
+  Readln;
+
+
+end.

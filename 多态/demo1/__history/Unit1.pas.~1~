@@ -1,0 +1,20 @@
+unit Unit1;
+
+interface
+  type
+      TColor = Interface
+
+      End;
+
+
+      TAnimal = class(TInterfacedObject)
+      public
+        procedure Round();virtual;abstract;
+
+      end;
+      TDog =class(TAnimal,TColor)
+
+      end;
+implementation
+
+end.

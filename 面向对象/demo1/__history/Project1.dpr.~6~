@@ -1,0 +1,97 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+{
+                  【类和对象】
+思想：
+面向过程：强调功能行为（方法、函数），C语言就是面向过程的语言
+
+基于对象：使用别人定义好的对象。VB、JavaScript
+
+面向对象：将功能封装进对象，强调具备了功能的对象。delphi c++ java c#
+
+
+}
+{*------------------------------------------------------------------------------
+  类和对象的关系：类就是某一类事物的抽象模板
+                  对象是按照模板产生的具体的事物
+ 继承：类和类的关系  不是具体对象
+ 封装：将不必要暴露的细节隐藏起来
+ 多态：一类事物以多种形态存在
+
+ 1.怎样创建一个类:类的成员（属性（成员变量、字段）、功能（方法、函数、过程、例程））
+ 2.如何创建一个类的对象
+ 3,对象的生命周期:对象从创建到消亡的过程
+ 不销毁会导致内存泄漏，因此delphi对象要创建和销毁
+     1.对象的创建：构造方法：在内存中申请一个内存空间，根据类里的数据大小决定分配多少
+     从而实现对象的创建。 并且可以初始化类成员的功能
+     2.对象的销毁：（1）free （2）destroy（3）freeandnil （4）nil空值
+     3.self:表示本类对象 任何类都继承了TObject 所有类的父类，没写也继承。
+     因此 定义self 的作用就是当，类的方法和父类方法名字重复了，写个self 就可以
+     调用本类的方法
+      此外还可以解决命名冲突
+ 4.delphi中单元的概念
+-------------------------------------------------------------------------------}
+type
+    TUser = class
+      FName:string; //字段
+
+      constructor Aaa(Name:string); //构造方法
+      procedure SetName(Name:string); //声明一个功能
+      destructor Destroy();override;//销毁对象的方法 ctrl shift + c  自动生成
+    end;
+
+
+{ TUser }
+
+constructor TUser.Aaa(Name:string);
+begin
+     //初始化
+     FName := Name;
+end;
+
+destructor TUser.Destroy;
+begin
+{调用父类销毁对象的方法}
+  inherited;
+end;
+
+procedure TUser.SetName(Name: string);
+begin
+    FName := Name;
+end;
+
+ var
+    User : TUser;
+
+{ 方法一
+    通过类的构造方法，创建一个类的对象
+    User := TUser.create;//nil;
+    User.FName:='成龙'; //设置字段
+
+    Writeln(User.FName);
+    User.Free();  //销毁对象
+
+ }
+
+  {方法二
+    但是如果多个指针都指向这个对象时，不要用FreeAndNil(User);方法清空，因为
+    可能其他指针还在使用这个对象
+  }
+begin
+    {通过类的构造方法，创建一个类的对象}
+    User := TUser.create;//nil;  一但我们设置了构造方法， 就可以不使用 User := TUser.create;了
+    //而改用  User := TUser.Aaa('aaa');
+    User.FName:='成龙'; //设置字段
+
+
+    Writeln(User.FName);
+    FreeAndNil(User);
+
+    Readln;
+end.

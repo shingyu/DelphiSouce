@@ -1,0 +1,17 @@
+unit UTools;
+
+interface //申明区域
+ var
+    Name: string;
+implementation //实现区域
+ var
+    Age:Integer; //interface部分申明的外部可用，本部分外部不可用
+
+initialization //初始化区域
+ Name:='成龙';
+ Age :=18;
+
+finalization //销毁区域
+  Name := '';
+  Age := 0;
+end.

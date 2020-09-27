@@ -1,0 +1,33 @@
+program Project2;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils,
+  UTools in 'UTools.pas',
+  Unit1 in 'Unit1.pas';
+
+{*------------------------------------------------------------------------------
+ 1.单元
+      什么是单元  （ unit ）
+      为什么要使用
+            --方便代码维护
+            --对代码进行分门别类的整理
+      怎么使用
+
+ 2.属性
+      --访问的可见性（访问权限修饰符）
+               1.private; 私有 ，则类里的字段不能直接访问
+               2.public;
+-------------------------------------------------------------------------------}
+    var
+       Person : TPerson;
+
+
+begin
+   Writeln(Name);
+   {Writeln(Age);}
+   Readln;
+end.

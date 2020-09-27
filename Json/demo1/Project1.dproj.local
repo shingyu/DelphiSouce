@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2020/09/26 00:14:45.430,=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/09/26 00:17:50.273,C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\Json\demo1\Unit1.pas=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/09/26 00:17:50.273,C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\Json\demo1\Unit1.dfm=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/09/26 00:17:53.569,C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\Json\demo1\Project1.dproj=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2020/09/26 00:22:56.273,=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\Json\demo1\Unit2.pas</Transaction>
+    <Transaction>2020/09/26 00:23:45.534,C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\Json\demo1\domain\Unit2.pas=C:\Users\gxy\Documents\Embarcadero\Studio\Projects\test\Json\demo1\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>
